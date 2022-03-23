@@ -27,7 +27,8 @@ namespace CarRentalManagement___DataAccessLayer.DTO
         [Required]
         public IDProof KycDetails { get; set; }
         //[Min18YearsIfAMember]
-        public DateTime? Birthdate { get; set; }
-        public List<Order> OrdersPlaced { get; set; }
+        [Range(18, 100)]
+        public int Age { get; set; }
+        public List<Order>? OrdersPlaced { get; set; }
     }
 }

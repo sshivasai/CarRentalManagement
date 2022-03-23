@@ -1,5 +1,4 @@
 C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\bin\Debug\net6.0\CarRentalManagement - DataAccessLayer.deps.json
-C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\bin\Debug\net6.0\CarRentalManagement - DataAccessLayer.runtimeconfig.json
 C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\bin\Debug\net6.0\CarRentalManagement - DataAccessLayer.dll
 C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\bin\Debug\net6.0\CarRentalManagement - DataAccessLayer.pdb
 C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\obj\Debug\net6.0\CarRentalManagement - DataAccessLayer.csproj.AssemblyReference.cache
@@ -10,5 +9,6 @@ C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\
 C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\obj\Debug\net6.0\CarRentalManagement - DataAccessLayer.dll
 C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\obj\Debug\net6.0\refint\CarRentalManagement - DataAccessLayer.dll
 C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\obj\Debug\net6.0\CarRentalManagement - DataAccessLayer.pdb
-C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\obj\Debug\net6.0\CarRentalManagement - DataAccessLayer.genruntimeconfig.cache
 C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\obj\Debug\net6.0\ref\CarRentalManagement - DataAccessLayer.dll
+C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\bin\Debug\net6.0\CarRentalManagement - DataAccessLayer.runtimeconfig.json
+C:\CarRentalSystemSln\CarRentalManagement\CarRentalManagement - DataAccessLayer\obj\Debug\net6.0\CarRentalManagement - DataAccessLayer.genruntimeconfig.cache
