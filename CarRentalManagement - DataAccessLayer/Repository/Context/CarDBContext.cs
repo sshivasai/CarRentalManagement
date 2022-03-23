@@ -11,8 +11,8 @@ namespace CarRentalManagement___DataAccessLayer.Repository.Context
 {
     public class CarDBContext : DbContext
     {
-        //public DbSet<UserDto> UserDtos { get; set; }
-        //public DbSet<AdminDto> AdminDtos { get; set; }
+        public DbSet<UserDto> UserDtos { get; set; }
+        public DbSet<AdminDto> AdminDtos { get; set; }
         //public DbSet<CarDto> CarDtos { get; set; }
         //public DbSet<CarTypeDto> CarTypeDtos { get; set; }
         //public DbSet<Payment> Payments { get; set; }

@@ -18,8 +18,7 @@ namespace CarRentalManagement___DataAccessLayer.DTO
         public UserDto User { get; set; }
         [Required]
         public bool PaymentStatus { get; set; }
-        [Required]
-        public Order OrderDetails { get; set; } 
+        
 
     }
 }

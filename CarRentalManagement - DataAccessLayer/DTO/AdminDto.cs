@@ -25,6 +25,6 @@ namespace CarRentalManagement___DataAccessLayer.DTO
         [Required]
         public string PhoneNumber { get; set; }
         
-        public List<Order>? OrderDetails { get; set; }
+        public ICollection<Order>? OrderDetails { get; set; }
     }
 }

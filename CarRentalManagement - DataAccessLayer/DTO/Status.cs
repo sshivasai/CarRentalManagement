@@ -5,7 +5,7 @@ namespace CarRentalManagement___DataAccessLayer.DTO
     public class Status
     {
         [Key]
-        public Order orderDetails { get; set; }
+        public bool IsPending { get; set; }
         //0 - not delivered
         //1 - deliverd
         public bool DeliveryStatus { get; set; }
@@ -14,7 +14,7 @@ namespace CarRentalManagement___DataAccessLayer.DTO
         public bool ReturnStatus { get; set; }
 
         
-        public bool IsPending { get; set; }
+        
 
     }
 }

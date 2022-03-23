@@ -5,7 +5,7 @@ namespace CarRentalManagement___DataAccessLayer.DTO
     public class Condition
     {
         [Key]
-        public int CarID;
-        public string conditionName;
+        public int CarID { get; set; }
+        public string conditionName { get; set; }
     }
 }
