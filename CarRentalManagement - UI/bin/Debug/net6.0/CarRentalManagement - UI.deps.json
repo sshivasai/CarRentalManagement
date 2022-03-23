@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CarRentalManagement - UI/1.0.0": {
+        "runtime": {
+          "CarRentalManagement - UI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CarRentalManagement - UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

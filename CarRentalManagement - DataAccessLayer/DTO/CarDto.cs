@@ -9,6 +9,7 @@ namespace CarRentalManagement___DataAccessLayer.DTO
 {
     public class CarDto
     {
+        [Key]
         public int CarId { get; set; }
 
         [Required]

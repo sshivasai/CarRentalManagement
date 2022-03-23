@@ -1,7 +1,10 @@
-﻿namespace CarRentalManagement___DataAccessLayer.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CarRentalManagement___DataAccessLayer.DTO
 {
     public class Status
     {
+        [Key]
         public Order orderDetails { get; set; }
         //0 - not delivered
         //1 - deliverd
