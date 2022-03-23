@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTO\" />
-    <Folder Include="Entity\" />
+    <Folder Include="Repository\Context\" />
+    <Folder Include="Repository\Entity\" />
   </ItemGroup>
 
 </Project>
