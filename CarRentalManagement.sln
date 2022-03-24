@@ -13,6 +13,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalManagement - DataAccessLayer", "CarRentalManagement - DataAccessLayer\CarRentalManagement - DataAccessLayer.csproj", "{4B6AB75E-4BAA-4CB2-B08A-88E914F6037B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalManagement -API", "CarRentalManagement -API\CarRentalManagement -API.csproj", "{ECD688BF-B2C0-44A0-8178-4E30ECAAA777}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4B6AB75E-4BAA-4CB2-B08A-88E914F6037B} = {4B6AB75E-4BAA-4CB2-B08A-88E914F6037B}
+		{30033779-AF67-44ED-A8B1-F83D9E1C341B} = {30033779-AF67-44ED-A8B1-F83D9E1C341B}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalManagement - UI", "CarRentalManagement - UI\CarRentalManagement - UI.csproj", "{30033779-AF67-44ED-A8B1-F83D9E1C341B}"
 EndProject

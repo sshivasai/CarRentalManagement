@@ -14,8 +14,9 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
                 {
                     AdminId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    LName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    FName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -82,8 +83,9 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
                 {
                     UserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    LName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KycDetailsIDNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -125,7 +127,7 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
                 columns: table => new
                 {
                     PaymentId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PaymentAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    PaymentAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     PaymentType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     PaymentStatus = table.Column<bool>(type: "bit", nullable: false)
@@ -147,7 +149,7 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
                 {
                     CarId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     year = table.Column<int>(type: "int", nullable: false),
                     CarTypeCarId = table.Column<int>(type: "int", nullable: false),
                     Stock = table.Column<int>(type: "int", nullable: false),

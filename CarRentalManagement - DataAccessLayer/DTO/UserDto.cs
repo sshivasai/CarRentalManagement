@@ -11,24 +11,21 @@ namespace CarRentalManagement___DataAccessLayer.DTO
     {
         [Key]
         public int UserId {get; set;}
-
-        [Required]
-        [StringLength(255)]
+        
+        public string Password { get; set; }
+      
         public string FName { get; set; }
-        [Required]
-        [StringLength(255)]
+        
         public string LName { get; set; }
-        [Required,StringLength(255)]
-        private string Password { get; set; }
-        [Required]
+       
         public string Email { get; set; }
-        [Required]
+       
         public string PhoneNumber { get; set; }
-        [Required]
+      
         public IDProof KycDetails { get; set; }
         //[Min18YearsIfAMember]
-        [Range(18, 100)]
+        
         public int Age { get; set; }
-        public List<Order>? OrdersPlaced { get; set; }
+        public ICollection<Order>? OrdersPlaced { get; set; }
     }
 }

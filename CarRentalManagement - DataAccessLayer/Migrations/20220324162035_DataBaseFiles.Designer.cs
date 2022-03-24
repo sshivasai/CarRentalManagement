@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarRentalManagement___DataAccessLayer.Migrations
 {
     [DbContext(typeof(CarDBContext))]
-    [Migration("20220323145127_DataBaseFiles")]
+    [Migration("20220324162035_DataBaseFiles")]
     partial class DataBaseFiles
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,13 +38,15 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
 
                     b.Property<string>("FName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
@@ -77,8 +79,7 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
@@ -194,7 +195,6 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal?>("PaymentAmount")
-                        .IsRequired()
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("PaymentStatus")
@@ -264,8 +264,7 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
 
                     b.Property<string>("FName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("KycDetailsIDNumber")
                         .IsRequired()
@@ -273,8 +272,11 @@ namespace CarRentalManagement___DataAccessLayer.Migrations
 
                     b.Property<string>("LName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()

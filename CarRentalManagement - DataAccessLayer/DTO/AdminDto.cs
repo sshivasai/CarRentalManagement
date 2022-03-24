@@ -12,17 +12,15 @@ namespace CarRentalManagement___DataAccessLayer.DTO
         [Key]
         public int AdminId { get; set; }
 
-        [Required]
-        [StringLength(255)]
+      
         public string FName { get; set; }
-        [Required]
-        [StringLength(255)]
+       
         public string LName { get; set; }
-        [Required, StringLength(255)]
-        private string Password { get; set; }
-        [Required]
+        
+        public string Password { get; set; }
+        
         public string Email { get; set; }
-        [Required]
+        
         public string PhoneNumber { get; set; }
         
         public ICollection<Order>? OrderDetails { get; set; }

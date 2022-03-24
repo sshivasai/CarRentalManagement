@@ -8,15 +8,15 @@ namespace CarRentalManagement___DataAccessLayer.DTO
         
         public string PaymentId { get; set; }
 
-        [Required]
+        
         public decimal? PaymentAmount { get; set; }
 
-        [Required]
+        
         public string PaymentType { get; set; }
 
-        [Required]
+       
         public UserDto User { get; set; }
-        [Required]
+       
         public bool PaymentStatus { get; set; }
         
 
