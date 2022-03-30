@@ -1,0 +1,104 @@
+﻿
+@model ShoppingCart
+<form method="post">
+    
+    <input hidden asp-for="CarId" />
+        <div class="card  container">
+            <div class="card-header bg-light text-light ml-0  row ">
+                <div class="col-12 col-md-6">
+                    <h1 class="text-dark">@Model.Car.Name</h1>
+                    <p class="text-info" style="font-weight:bold">Brand : @Model.Car.Manufacturer.Name</p>
+                </div>
+                <div class="col-12 col-md-6 text-end pt-4">
+                    <span class="badge bg-info pt-2" style="height:32px;font-size:larger">@Model.Car.CarCategory.CategoryName</span>
+                    <span class="badge bg-warning pt-2" style="height:32px;font-size:larger">@Model.Car.Year</span>
+                     <span class="badge bg-info pt-2" style="height:32px;font-size:larger">Gears : @Model.Car.Gears</span>
+                    <span class="badge bg-warning pt-2" style="height:32px;font-size:larger">Transmission : @Model.Car.Transmission</span>
+                    
+                </div>
+            </div>
+            <div class="card-body row container">
+                <div class="container rounded p-2">
+                    <div class="row">
+                        <div class="col-8 col-lg-8">
+                            <div class="row pl-2">
+                                <h5 class="text-muted">Condition :@Model.Car.Condition</h5>
+                            </div>
+                            <div class="row pl-2">
+                                <h5 class="text-muted">Stock : Available</h5>
+                            </div>
+                             <div class="row pl-2">
+                                <h5 class="text-muted">Description : @Model.Car.Description</h5>
+                            </div>
+                            <div class="row pl-2">
+                                <h5 class="text-muted pb-2">Actual Price : @Model.Car.DefaultPrice <strike>$$$</strike></h5>
+                            </div>
+                            <div class="row text-center pl-2 bg-white">
+                                <div class="p-1 col-2 bg-info border-bottom">
+                                    <div>Days</div>
+                                </div>
+                                <div class="p-1 col-2 bg-info border-bottom">
+                                    <div>1-7</div>
+                                </div>
+                                <div class="p-1 col-2 bg-info border-bottom">
+                                    <div>7-15</div>
+                                </div>
+                                <div class="p-1 col-2 bg-info border-bottom">
+                                    <div>15+</div>
+                                </div>
+                            </div>
+                            <div class="row text-center pl-2" style="color:black; font-weight:bold">
+                                <div class="p-1 col-2 bg-info">
+                                    <div>Price</div>
+                                </div>
+                                <div class="p-1 col-2 bg-info">
+                                    <div>@Model.Car.PricePerDay $$</div>
+                                </div>
+                                <div class="p-1 col-2 bg-info">
+                                    <div>@Model.Car.PricePerWeek</div>
+                                </div>
+                                <div class="p-1 col-2 bg-info">
+                                    <div>@Model.Car.PricePerMonth $$</div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row pl-2">
+                                <p class="text-secondary">Description : @Html.Raw(Model.Car.Description)</p>
+                            </div>
+                            <label asp-for="PickupDate">Pickup Date:</label>
+
+  <input asp-for="PickupDate" type="date"><br>
+  <br />
+  <label asp-for="ReturnDate">Return Date:</label>
+
+  <input asp-for="ReturnDate" type="date" ><br>
+  <br />
+                        </div>
+                        <div class="col-12 col-lg-3 offset-lg-1 text-center">
+                            <img src="@Model.Car.ImageUrl" width="330" class="rounded" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-12 col-md-6 pb-1">
+                        <a class="btn btn-success form-control " style="height:50px;" asp-action="Index">Back to Home</a>
+                    </div>
+                    <div class="col-12 col-md-6 pb-1">
+                        
+                            <button type="submit" value="Add to Cart" class="btn btn-primary form-control" style="height:50px;">Add to Cart for Further Details</button>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+  
+
+
+
+
+</form>
+ 

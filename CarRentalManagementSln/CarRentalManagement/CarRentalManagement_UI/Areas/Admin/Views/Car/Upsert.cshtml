@@ -1,0 +1,144 @@
+﻿@using CarRentalManagement_DAL.ViewModels
+@model CarVM
+
+
+
+<form method="post" asp-action="Upsert" enctype="multipart/form-data">
+	<input asp-for ="Car.Id" hidden />
+	<input asp-for ="Car.ImageUrl" hidden />
+	<div class = "row">
+		<div class = "col-8">
+			<div class="border p-3 mt-4 row">
+		<div class="col-12 row pb-2">
+			<h2 class="text-primary">@(Model.Car.Id!=0?"Update Details ":"Add a New  Car")</h2>
+			<hr />
+		</div>
+		@*<div asp-validation-summary="All"></div>*@
+		<div class="mb-3 col-6">
+			<label asp-for="Car.Name"></label>
+			<input asp-for="Car.Name" class="form-control" />
+			<span asp-validation-for="Car.Name" class="text-danger"></span>
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.ManufacturerId"></label>
+			<select asp-for="Car.ManufacturerId" asp-items="@Model.ManufacturerList" class = "form-select">
+				<option disabled selected>--Select Brand--</option>
+			</select>
+			<span asp-validation-for="Car.ManufacturerId" class="text-danger"></span>
+		</div>
+		<div class="mb-3 col-6">
+			<label asp-for="Car.CarCategoryId"></label>
+			<select asp-for="Car.CarCategoryId" asp-items="@Model.CarCategoryList" class = "form-select">
+				<option disabled selected>--Select Category of Car--</option>
+			</select>
+			<span asp-validation-for="Car.CarCategoryId" class="text-danger"></span>
+		
+			
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.Year"></label>
+			<input asp-for="Car.Year" class="form-control" />
+			<span asp-validation-for="Car.Year" class="text-danger"></span>
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.Gears"></label>
+			<input asp-for="Car.Gears" class="form-control" />
+			<span asp-validation-for="Car.Gears" class="text-danger"></span>
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.Transmission"></label>
+			 <select asp-for="Car.Transmission" class = "form-select">
+        <option disabled selected>--Select Transmission--</option>
+        <option value="Manual">Manual</option>
+        <option value="AMT">AMT</option>
+    </select><br />
+			<span asp-validation-for="Car.Transmission" class="text-danger"></span>
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.Stock"></label>
+			<input asp-for="Car.Stock" class="form-control" />
+			<span asp-validation-for="Car.Stock" class="text-danger"></span>
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.Condition"></label>
+			<select asp-for="Car.Condition" class = "form-select">
+        <option disabled selected>--Select Condition--</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+    </select><br />
+			<span asp-validation-for="Car.Condition" class="text-danger"></span>
+		</div>
+		<div class="mb-3 col-6">
+			<label asp-for="Car.DefaultPrice"></label>
+			<input asp-for="Car.DefaultPrice" class="form-control" />
+			<span asp-validation-for="Car.DefaultPrice" class="text-danger"></span>
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.PricePerDay"></label>
+			<input asp-for="Car.PricePerDay" class="form-control" />
+			<span asp-validation-for="Car.PricePerDay" class="text-danger"></span>
+		</div>
+		<div class="mb-3 col-6">
+			<label asp-for="Car.PricePerWeek"></label>
+			<input asp-for="Car.PricePerWeek" class="form-control" />
+			<span asp-validation-for="Car.PricePerWeek" class="text-danger"></span>
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.PricePerMonth"></label>
+			<input asp-for="Car.PricePerMonth" class="form-control" />
+			<span asp-validation-for="Car.PricePerMonth" class="text-danger"></span>
+		</div><div class="mb-3 col-6">
+			<label asp-for="Car.ImageUrl"></label>
+			<input type= "file" id ="uploadBox" asp-for="Car.ImageUrl" class="form-control" name ="file" />
+			
+		</div>
+		<div class="mb-3">
+			<label asp-for="Car.Description"></label>
+			<textarea asp-for="Car.Description" class="form-control" ></textarea>
+			<span asp-validation-for="Car.Description" class="text-danger"></span>
+		</div><div class="mb-3">
+		@if(Model.Car.Id!=0){
+
+				<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+			}
+			else
+			{
+				<button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Add</button>
+			}
+			<a asp-controller="Car" asp-action="Index" class="btn btn-secondary" style="width:150px">
+
+			Back to List
+		</a>
+	</div>
+
+	</div>
+		</div>
+		<div class = "col-2 pt-10">
+			<img src="@Model.Car.ImageUrl" 
+			width = "600"
+			 />
+		</div>
+	</div>
+	
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+	<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: ' autolink  tinymcespellchecker',
+      
+      toolbar_mode: 'floating',
+     
+    });
+  
+	function ValidateInput(){
+		if(document.getElementById("uploadBox").value ==""){
+			Swal.fire({
+			  icon: 'error',
+			  title: 'Oops...',
+			  text: 'Please Upload a Image ! ',
+			
+			});
+			return false;
+		}
+		return true;
+	}
+	</script>
+}
